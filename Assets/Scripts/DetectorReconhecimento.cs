@@ -5,10 +5,22 @@ using UnityEngine.UI;
 using Vuforia;
 
 public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
+
     private TrackableBehaviour mTrackableBehaviour;
-    public Button btnInstrucoes;
+    
+    // botão que ativa / desativa o painel de instrução
+    public Button btnInstrucoes; 
+
+    /* painel de instruções que será ativado / desativado
+     * se o rastreio funcionar
+     */
+
     public GameObject painelInstrucoes;
 
+    /*
+     * Insere uma instancia desta classe como listener
+     * do rastreador de imagens do vuforia
+     */
     void Start() {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour) {
@@ -16,6 +28,11 @@ public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
         }
     }
 
+    /*
+     * Função chamada todas as vezes que
+     * altera o estado do rastreio de um 
+     * target
+     **/
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus) {

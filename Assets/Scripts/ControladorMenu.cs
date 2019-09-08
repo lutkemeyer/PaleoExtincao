@@ -3,22 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ControladorMenu : MonoBehaviour
-{
+public class ControladorMenu : MonoBehaviour{
+
+    /*
+     * vetor de dinossauros inseridos através
+     * do unity
+     */
     public GameObject[] dinossauros;
+
+    /*
+     * vetor de peoes inseridos através do
+     * unity
+     */
     public GameObject[] peoes;
+
+    /*
+     * label do título para ser alterado quando
+     * o usuário selecionar um dinossauro
+     */
     public Text cabecalho;
+
+    /*
+     * botão de voltar do menu, para que seja 
+     * desativado / ativado quando está selecionando
+     * um dino / peão
+     */
     public Button btnVoltar;
 
-    private int indexDino = 0;
-    private int indexPeao = 0;
+    /*
+     * variáveis que guardam a posição de seleção
+     * dos dinossauros / peões
+     */
+    private int indexDino = 0, indexPeao = 0;
 
+    /* 
+     * variável que controla se o usuário
+     * está selecionando dinossauros ou peões
+     */
     private bool isSelecionandoDino = true;
 
+    /*
+     * inicializa a classe tornando o botão de voltar 
+     * desabilitado, para ser ativado somente após
+     * a seleção de um dino
+     */
     void Start() {
         btnVoltar.interactable = false;
     }
 
+    /*
+     * método que troca o objeto para o próximo
+     * item do vetor, seja ele um dino ou um peão
+     */
     public void OnClickDireita() {
         if (isSelecionandoDino) {
             if (indexDino < (dinossauros.Length - 1)) {
@@ -42,6 +78,10 @@ public class ControladorMenu : MonoBehaviour
             }
         }
     }
+    /*
+     * método que troca o objeto para item anterior
+     * do vetor, seja ele um dino ou um peão
+     */
     public void OnClickEsquerda() {
         if (isSelecionandoDino) {
             if (indexDino > 0) {
@@ -65,8 +105,13 @@ public class ControladorMenu : MonoBehaviour
             }
         }
     }
-    public void OnClickSelecionar() {
 
+    /*
+     * Seleciona o peão ou o dino, guardando nas variáveis da classe
+     * ou inserindo nas variáveis estáticas para posteriormente trocar de tela 
+     * e as mesmas serem possíveis de ser acessadas
+     */
+    public void OnClickSelecionar() {
         if (isSelecionandoDino) {
             btnVoltar.interactable = true;
             isSelecionandoDino = false;
@@ -74,12 +119,15 @@ public class ControladorMenu : MonoBehaviour
             peoes[indexPeao].SetActive(true);
             cabecalho.text = "ESCOLHA SEU PEÃO";
         } else {
-            ControladorDeCenas.addParametro(ControladorDeCenas.DINOSSAURO, indexDino);
-            ControladorDeCenas.addParametro(ControladorDeCenas.PEAO, indexPeao);
-            ControladorDeCenas.carregaCena(ControladorDeCenas.CENA_JOGO);
+            ControladorCenas.addParametro(ControladorCenas.DINOSSAURO, indexDino);
+            ControladorCenas.addParametro(ControladorCenas.PEAO, indexPeao);
+            ControladorCenas.carregaCena(ControladorCenas.CENA_JOGO);
         }
     }
     
+    /*
+     * volta a opção de seleção de peão para dino, desativando o botão
+     */
     public void OnClickVoltar() {
         cabecalho.text = "ESCOLHA SEU PERSONAGEM";
         btnVoltar.interactable = false;
