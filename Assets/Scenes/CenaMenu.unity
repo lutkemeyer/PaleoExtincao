@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.71146697, g: 0.7703693, b: 0.8341425, a: 1}
+  m_IndirectSpecularColor: {r: 0.7117363, g: 0.77046686, b: 0.83423966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3502941}
   - component: {fileID: 3502940}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,9 +437,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 11.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1588173044}
   - {fileID: 1285905724}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &304571813
 MonoBehaviour:
@@ -768,7 +769,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.79e-43, y: NaN, z: 7.79e-43, w: -4.0364776e+17}
+  m_BoundingSphereOverride: {x: 3.6350876e-27, y: 0, z: 0, w: 6.6e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1103,7 +1104,7 @@ Transform:
   - {fileID: 887175634}
   - {fileID: 40591625}
   m_Father: {fileID: 304571812}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448583451
 GameObject:
@@ -1117,6 +1118,7 @@ GameObject:
   - component: {fileID: 1448583455}
   - component: {fileID: 1448583454}
   - component: {fileID: 1448583453}
+  - component: {fileID: 1448583456}
   m_Layer: 5
   m_Name: BtnVoltar
   m_TagString: Untagged
@@ -1226,6 +1228,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448583451}
   m_CullTransparentMesh: 0
+--- !u!95 &1448583456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448583451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef7ddc72f122c8544a5f53f86c07a4e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1588173043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,11 +1271,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588173043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.650085, y: 7.9024925, z: 43.284912}
+  m_LocalPosition: {x: 9.650085, y: 7.9024925, z: 31.784912}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 304571812}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636543605
 GameObject:
@@ -1268,6 +1289,7 @@ GameObject:
   - component: {fileID: 1636543609}
   - component: {fileID: 1636543608}
   - component: {fileID: 1636543607}
+  - component: {fileID: 1636543610}
   m_Layer: 5
   m_Name: BtnProximo
   m_TagString: Untagged
@@ -1377,6 +1399,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636543605}
   m_CullTransparentMesh: 0
+--- !u!95 &1636543610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636543605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2ef791173e24bc4e84a42fcfea401a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1842776624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1505,7 @@ GameObject:
   - component: {fileID: 1878014467}
   - component: {fileID: 1878014466}
   - component: {fileID: 1878014465}
+  - component: {fileID: 1878014468}
   m_Layer: 5
   m_Name: BtnSelecionar
   m_TagString: Untagged
@@ -1573,6 +1615,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878014463}
   m_CullTransparentMesh: 0
+--- !u!95 &1878014468
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878014463}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef7ddc72f122c8544a5f53f86c07a4e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1887238861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1666,7 @@ Transform:
   - {fileID: 1895175477}
   - {fileID: 231149055}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1895175476
 PrefabInstance:
@@ -1714,6 +1775,7 @@ GameObject:
   - component: {fileID: 2006739053}
   - component: {fileID: 2006739052}
   - component: {fileID: 2006739051}
+  - component: {fileID: 2006739054}
   m_Layer: 5
   m_Name: BtnAnterior
   m_TagString: Untagged
@@ -1823,3 +1885,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006739049}
   m_CullTransparentMesh: 0
+--- !u!95 &2006739054
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006739049}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 493fd70d91087f84d90f762e4e96ec5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

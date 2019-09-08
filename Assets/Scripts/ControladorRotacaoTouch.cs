@@ -45,12 +45,12 @@ public class ControladorRotacaoTouch : MonoBehaviour
     void Update() {
         acelerometro.atualiza(); 
         float distAcel = acelerometro.getDistNorm();
-        if (acelerometro.getDir() == AcelerometroTouch.Direcao.DIREITA) {
-            distAcel = distAcel * (-1);
+        if (distAcel > 0) {
+            if (acelerometro.getDir() == AcelerometroTouch.Direcao.DIREITA) distAcel = distAcel * (-1);
+            valorMovimento += (distAcel * 10) * velocidade;
+            QRfrom = transform.rotation;
+            QRto = Quaternion.Euler(0, valorMovimento, 0);
+            transform.rotation = Quaternion.Lerp(QRfrom, QRto, Time.deltaTime * suavidade);
         }
-        valorMovimento += (distAcel * 10) * velocidade;
-        QRfrom = transform.rotation;
-        QRto = Quaternion.Euler(0, valorMovimento, 0);
-        transform.rotation = Quaternion.Lerp(QRfrom, QRto, Time.deltaTime * suavidade);
     }
 }
