@@ -11,7 +11,8 @@ public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
     // botão que ativa / desativa o painel de instrução
     public Button btnInstrucoes; 
 
-    /* painel de instruções que será ativado / desativado
+    /* 
+     * painel de instruções que será ativado / desativado
      * se o rastreio funcionar
      */
 
