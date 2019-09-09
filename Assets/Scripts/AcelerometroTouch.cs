@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AcelerometroTouch : MonoBehaviour
-{
+public class AcelerometroTouch{
     /*
      * Enumerador para controle dos movimentos realizados
      * com touch, caso não esteja sendo realizado um movimento,
