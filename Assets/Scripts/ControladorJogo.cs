@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControladorJogo : MonoBehaviour{
 
@@ -15,19 +16,13 @@ public class ControladorJogo : MonoBehaviour{
      * atrelados aos peões dinamicamente apos a seleção
      * do menu principal
      */
-    public GameObject[] dinossauros;
+    public GameObject[] personagens;
 
     /*
-     * instância do painel de instrucoes usado para abrir
-     * e fechar o mesmo, no momento adequado
+     * painel de instrução que é ativado ou desativado 
+     * através do botao de instrução
      */
-    public GameObject painelInstrucoes;
-
-    /*
-     * variável que controla se o painel de instrução
-     * está aberto ou não
-     */
-    private bool isPainelInstAberto = false;
+    public GameObject pnInstrucao;
 
     /*
      * Assim que a classe é instanciada, as variáveis de seleção
@@ -35,9 +30,11 @@ public class ControladorJogo : MonoBehaviour{
      * ser reconhecido pelo vuforia
      */
     void Start() {
-        int indexDino = ControladorCenas.getParametro(ControladorCenas.DINOSSAURO);
-        int indexPeao = ControladorCenas.getParametro(ControladorCenas.PEAO);
-        dinossauros[indexDino].transform.parent = peoes[indexPeao].transform;
+        if (personagens.Length > 0 && peoes.Length > 0) {
+            int indexDino = ControladorCenas.getParametro(ControladorCenas.DINOSSAURO);
+            int indexPeao = ControladorCenas.getParametro(ControladorCenas.PEAO);
+            personagens[indexDino].transform.parent = peoes[indexPeao].transform;
+        }
     }
     /*
      * Caso clique no botão de voltar, carrega a cena do menu
@@ -48,14 +45,20 @@ public class ControladorJogo : MonoBehaviour{
     }
 
     /*
-     * Se clicar no botão de abrir/fechar o painel de instruções
+     * Se clicar no botão de abrir/fechar o painel de instruções,
+     * acessa o controlador de estados do botao, e se houver, faz
+     * a mudança de estado, e acessa o painel alterando sua visibilidade
      */
     public void OnClickInstrucoes() {
-        if (isPainelInstAberto) {
-            painelInstrucoes.SetActive(false);
-        } else {
-            painelInstrucoes.SetActive(true);
+        GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
+        if (btnInstrucao != null) {
+            ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
+            if (controladorEstadosBotao != null) {
+                controladorEstadosBotao.mudarEstado();
+            }
         }
-        isPainelInstAberto = !isPainelInstAberto;
+        if (pnInstrucao != null) {
+            pnInstrucao.SetActive(!pnInstrucao.activeSelf);
+        }
     }
 }
