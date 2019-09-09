@@ -31,9 +31,12 @@ public class ControladorJogo : MonoBehaviour{
      */
     void Start() {
         if (personagens.Length > 0 && peoes.Length > 0) {
-            int indexDino = ControladorCenas.getParametro(ControladorCenas.DINOSSAURO);
+            int indexPersonagem = ControladorCenas.getParametro(ControladorCenas.PERSONAGEM);
             int indexPeao = ControladorCenas.getParametro(ControladorCenas.PEAO);
-            personagens[indexDino].transform.parent = peoes[indexPeao].transform;
+            Debug.Log("Recuperou: "  + indexPersonagem + " " + indexPeao);
+            personagens[indexPersonagem].transform.parent = peoes[indexPeao].transform;
+        } else {
+            Debug.Log("Não recuperou");
         }
     }
     /*

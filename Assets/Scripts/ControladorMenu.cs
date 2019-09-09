@@ -9,7 +9,7 @@ public class ControladorMenu : MonoBehaviour{
      * vetor de dinossauros inseridos através
      * do unity
      */
-    public GameObject[] dinossauros;
+    public GameObject[] personagens;
 
     /*
      * vetor de peoes inseridos através do
@@ -34,7 +34,7 @@ public class ControladorMenu : MonoBehaviour{
      * variáveis que guardam a posição de seleção
      * dos dinossauros / peões
      */
-    private int indexDino = 0, indexPeao = 0;
+    private int indexPersonagem = 0, indexPeao = 0;
 
     /* 
      * variável que controla se o usuário
@@ -57,14 +57,14 @@ public class ControladorMenu : MonoBehaviour{
      */
     public void OnClickDireita() {
         if (isSelecionandoDino) {
-            if (indexDino < (dinossauros.Length - 1)) {
-                dinossauros[indexDino].SetActive(false);
-                indexDino++;
-                dinossauros[indexDino].SetActive(true);
+            if (indexPersonagem < (personagens.Length - 1)) {
+                personagens[indexPersonagem].SetActive(false);
+                indexPersonagem++;
+                personagens[indexPersonagem].SetActive(true);
             } else {
-                dinossauros[indexDino].SetActive(false);
-                indexDino = 0;
-                dinossauros[indexDino].SetActive(true);
+                personagens[indexPersonagem].SetActive(false);
+                indexPersonagem = 0;
+                personagens[indexPersonagem].SetActive(true);
             }
         } else {
             if (indexPeao < (peoes.Length - 1)) {
@@ -84,14 +84,14 @@ public class ControladorMenu : MonoBehaviour{
      */
     public void OnClickEsquerda() {
         if (isSelecionandoDino) {
-            if (indexDino > 0) {
-                dinossauros[indexDino].SetActive(false);
-                indexDino--;
-                dinossauros[indexDino].SetActive(true);
+            if (indexPersonagem > 0) {
+                personagens[indexPersonagem].SetActive(false);
+                indexPersonagem--;
+                personagens[indexPersonagem].SetActive(true);
             } else {
-                dinossauros[indexDino].SetActive(false);
-                indexDino = dinossauros.Length - 1;
-                dinossauros[indexDino].SetActive(true);
+                personagens[indexPersonagem].SetActive(false);
+                indexPersonagem = personagens.Length - 1;
+                personagens[indexPersonagem].SetActive(true);
             }
         } else {
             if (indexPeao > 0) {
@@ -115,11 +115,11 @@ public class ControladorMenu : MonoBehaviour{
         if (isSelecionandoDino) {
             btnVoltar.interactable = true;
             isSelecionandoDino = false;
-            dinossauros[indexDino].SetActive(false);
+            personagens[indexPersonagem].SetActive(false);
             peoes[indexPeao].SetActive(true);
             cabecalho.text = "ESCOLHA SEU PEÃO";
         } else {
-            ControladorCenas.addParametro(ControladorCenas.DINOSSAURO, indexDino);
+            ControladorCenas.addParametro(ControladorCenas.PERSONAGEM, indexPersonagem);
             ControladorCenas.addParametro(ControladorCenas.PEAO, indexPeao);
             ControladorCenas.carregaCena(ControladorCenas.CENA_JOGO);
         }
@@ -133,6 +133,6 @@ public class ControladorMenu : MonoBehaviour{
         btnVoltar.interactable = false;
         isSelecionandoDino = true;
         peoes[indexPeao].SetActive(false);
-        dinossauros[indexDino].SetActive(true);
+        personagens[indexPersonagem].SetActive(true);
     }
 }

@@ -7,24 +7,22 @@ using UnityEngine.SceneManagement;
  * CLASSE RESPONSÁVEL POR REALIZAR AS TRANSIÇÕES ENTRE TELAS,
  * GUARDANDO SUAS VARIÁVEIS DE TRANSIÇÃO
  */
-public class ControladorCenas : MonoBehaviour{
-
-    public enum Cena { CENA_JOGO, CENA_MENU }
-    public enum Variavel { DINOSSAURO, PEAO }
-    
-    public const string DINOSSAURO = "DINOSSAURO";
-    public const string PEAO = "PEAO";
+public class ControladorCenas{
 
     public const string CENA_JOGO = "CenaJogo";
     public const string CENA_MENU = "CenaMenu";
-
+    
+    public const string PERSONAGEM = "PERSONAGEM";
+    public const string PEAO = "PEAO";
+    
+    
     private static Dictionary<string, string> parametros = new Dictionary<string, string>();
 
     /*
      * carrega o cena passada por parametro
      */
-    public static void carregaCena(string nomeCena) {
-        SceneManager.LoadScene(nomeCena);
+    public static void carregaCena(string cena) {
+        SceneManager.LoadScene(cena);
     }
 
     /*
@@ -32,11 +30,11 @@ public class ControladorCenas : MonoBehaviour{
      * e guardada no discionario desta classe.
      * Caso não encontre um valor guardado, retorna 0
      */
-    public static int getParametro(string chave) {
-        if (parametros.ContainsKey(chave)) {
-            return int.Parse(parametros[chave]);
+    public static int getParametro(string var) {
+        if (parametros.ContainsKey(var)) {
+            return int.Parse(parametros[var]);
         } else {
-            Debug.Log("DEU ERRO AO TENTAR PEGAR PARAMETRO: " + chave);
+            Debug.Log("DEU ERRO AO TENTAR PEGAR PARAMETRO: " + var);
             return 0;
         }
     }
@@ -47,10 +45,10 @@ public class ControladorCenas : MonoBehaviour{
      * Se já tiver valores salvos para o mesmo parâmetro, substitui,
      * caso contrario, apenas adiciona.
      */
-    public static void addParametro(string chave, int valor) {
-        if (parametros.ContainsKey(chave)) {
-            parametros.Remove(chave);
+    public static void addParametro(string var, int valor) {
+        if (parametros.ContainsKey(var)) {
+            parametros.Remove(var);
         }
-        parametros.Add(chave, valor.ToString());
+        parametros.Add(var, valor.ToString());
     }
 }

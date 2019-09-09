@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VuforiaUnityInfo version="7.0">
+    <TargetSet version="5.0" toolVersion="2.8.0">
+        <CylinderTarget name="Peao2Low" version="3.0" targetId="bf2e2a5962b64296a0f0465113f3fc45" sideLength="643.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao2Low.Body_scaled.jpg" topImage="Peao2Low.Top_scaled.jpg"/>
+        <CylinderTarget name="Peao1Low" version="3.0" targetId="ce0a8770aee84cb582ccd71a910c7325" sideLength="643.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao1Low.Body_scaled.jpg" topImage="Peao1Low.Top_scaled.jpg"/>
+        <CylinderTarget name="Peao2High" version="3.0" targetId="504949a5d7cd4c14849c223c72b35a29" sideLength="650.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao2High.Body_scaled.jpg" topImage="Peao2High.Top_scaled.jpg"/>
+        <CylinderTarget name="Peao1High" version="3.0" targetId="c4e46ba99e734c5fbbe60bd7f148ae1f" sideLength="650.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao1High.Body_scaled.jpg" topImage="Peao1High.Top_scaled.jpg"/>
+    </TargetSet>
+</VuforiaUnityInfo>
