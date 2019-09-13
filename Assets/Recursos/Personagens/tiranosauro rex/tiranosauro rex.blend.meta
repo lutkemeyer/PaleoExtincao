@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: -1414689128794178283
     second: ArmatureColuna|Idle2
+  - first:
+      74: -1710674179480484482
+    second: ArmatureColuna|Idle3
   externalObjects:
   - first:
       type: UnityEngine:Material
