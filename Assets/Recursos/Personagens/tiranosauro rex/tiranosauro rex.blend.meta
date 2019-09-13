@@ -9,7 +9,47 @@ ModelImporter:
   - first:
       74: -1414689128794178283
     second: ArmatureColuna|Idle2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialBocaBaixo
+    second: {fileID: 2100000, guid: 867894b9c2192c444baf3d670337633f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialBocaCIma
+    second: {fileID: 2100000, guid: 7b963417f6cc5b14d9529e1d112eb2e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialDente
+    second: {fileID: 2100000, guid: 635e03e8e45c9e3409fdc0c6b90652df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialLabio
+    second: {fileID: 2100000, guid: 30ce78c5a8202024f89cd0a45c8bed74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialLingua
+    second: {fileID: 2100000, guid: eae34e85621da0c47b1d7f97ff328014, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialOlho
+    second: {fileID: 2100000, guid: ec761e3bc870d634cba5f8487d633cf4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialPele
+    second: {fileID: 2100000, guid: 9711832c934abbc4e8c67736e2fba255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialUnhas
+    second: {fileID: 2100000, guid: 792a1729f7a4d6043ba3ccab228b7c2f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
