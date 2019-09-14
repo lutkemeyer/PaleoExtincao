@@ -8,9 +8,6 @@ public class RandomAnimBehaviour : StateMachineBehaviour {
 
     override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash){
         int valor = Random.Range(0, numAnimacoes);
-        if (animator.name == "tiranosauro rex") {
-            Debug.Log(valor);
-        }
         animator.SetInteger("valor", valor);
     }
 

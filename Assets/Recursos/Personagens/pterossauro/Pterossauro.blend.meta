@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: a47c72b9a7a3bd84f9a4176e8874eaca
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 3214857513008935653
+    second: Esqueleto|AlvoMeioLAction
+  - first:
+      74: 5912848691740393162
+    second: Esqueleto|AlvoMeioRAction
+  - first:
+      74: 7626774443697504809
+    second: Esqueleto|AlvoPontaLAction
+  - first:
+      74: -5024565916280331572
+    second: Esqueleto|AlvoPontaRAction
+  - first:
+      74: 2174045794081892003
+    second: Esqueleto|Idle
+  - first:
+      74: 3063962684877759361
+    second: AlvoMeioL|AlvoMeioLAction
+  - first:
+      74: 3441087034415475459
+    second: AlvoMeioL|AlvoMeioRAction
+  - first:
+      74: -6973351854962150450
+    second: AlvoMeioL|AlvoPontaLAction
+  - first:
+      74: 7094552305639599071
+    second: AlvoMeioL|AlvoPontaRAction
+  - first:
+      74: 106574774387879248
+    second: AlvoPontaL|AlvoMeioLAction
+  - first:
+      74: -1979312768256711090
+    second: AlvoPontaL|AlvoMeioRAction
+  - first:
+      74: -544563489669080656
+    second: AlvoPontaL|AlvoPontaLAction
+  - first:
+      74: 8484027349317049010
+    second: AlvoPontaL|AlvoPontaRAction
+  - first:
+      74: 7674981161451793017
+    second: AlvoMeioR|AlvoMeioLAction
+  - first:
+      74: 5298742698820349946
+    second: AlvoMeioR|AlvoMeioRAction
+  - first:
+      74: -7500140972944644463
+    second: AlvoMeioR|AlvoPontaLAction
+  - first:
+      74: -1274356136545967182
+    second: AlvoMeioR|AlvoPontaRAction
+  - first:
+      74: -8170316295099696131
+    second: AlvoPontaR|AlvoMeioLAction
+  - first:
+      74: 6284700510122929258
+    second: AlvoPontaR|AlvoMeioRAction
+  - first:
+      74: 2167543046924797963
+    second: AlvoPontaR|AlvoPontaLAction
+  - first:
+      74: -67300365721690188
+    second: AlvoPontaR|AlvoPontaRAction
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialAsa
+    second: {fileID: 2100000, guid: 6e6e26a5c2458214f818b80587fb8e05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialCorpo
+    second: {fileID: 2100000, guid: 9cc2dc33ee3931e468cdc9ff10249061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialOlho
+    second: {fileID: 2100000, guid: 1cad39d9de8bab143bc14d94f40a2ed1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
