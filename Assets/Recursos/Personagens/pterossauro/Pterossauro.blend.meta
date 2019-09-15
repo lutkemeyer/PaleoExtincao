@@ -66,6 +66,12 @@ ModelImporter:
   - first:
       74: -67300365721690188
     second: AlvoPontaR|AlvoPontaRAction
+  - first:
+      74: -2368916738203087895
+    second: Esqueleto|backflip
+  - first:
+      74: -8202358784246908120
+    second: AlvoPontaR|backflip
   externalObjects:
   - first:
       type: UnityEngine:Material
