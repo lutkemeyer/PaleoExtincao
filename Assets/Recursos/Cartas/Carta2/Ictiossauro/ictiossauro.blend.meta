@@ -12,6 +12,9 @@ ModelImporter:
   - first:
       74: -3920274668484332678
     second: OssosIctiossauro|Idle
+  - first:
+      74: -9177757157258418302
+    second: OssosIctiossauro|Pulando
   externalObjects:
   - first:
       type: UnityEngine:Material
