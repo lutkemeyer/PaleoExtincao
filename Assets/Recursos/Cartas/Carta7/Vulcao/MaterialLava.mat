@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialVulcao
-  m_Shader: {fileID: 4800000, guid: 6a151f652f5ba03458e9a7cd03ae88e8, type: 3}
+  m_Name: MaterialLava
+  m_Shader: {fileID: 4800000, guid: 036402a4b0d5f4342bbf1b572714f64e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Distort:
-        m_Texture: {fileID: 2800000, guid: 320bb884a8bf4bc4a93703190ccf9932, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -44,13 +44,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LavaTex:
-        m_Texture: {fileID: 2800000, guid: 531038125eae36e4e84167add651e636, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: -1.0061282, y: -1.0061282}
+        m_Offset: {x: 6.1334796, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: aa031c0d235e6344ca839df67bf5c7b3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 531038125eae36e4e84167add651e636, type: 3}
+        m_Scale: {x: 1.1700001, y: 1.1700001}
+        m_Offset: {x: 0.042599995, y: 0.9826}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -83,5 +83,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.77448, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
