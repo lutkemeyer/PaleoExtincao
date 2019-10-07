@@ -15,6 +15,9 @@ ModelImporter:
   - first:
       74: -9006698693311996578
     second: Armature|Idle4
+  - first:
+      74: -1433362656505919570
+    second: Armature|Morrendo
   externalObjects:
   - first:
       type: UnityEngine:Material

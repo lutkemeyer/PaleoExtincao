@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VuforiaUnityInfo version="7.0">
+    <TargetSet version="5.0" toolVersion="2.8.0">
+        <CylinderTarget name="Peao1" version="3.0" targetId="c4e46ba99e734c5fbbe60bd7f148ae1f" sideLength="650.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao1.Body_scaled.jpg" topImage="Peao1.Top_scaled.jpg"/>
+        <CylinderTarget name="Peao2" version="3.0" targetId="504949a5d7cd4c14849c223c72b35a29" sideLength="650.000000" topDiameter="260.500000" bottomDiameter="260.500000" sideImage="Peao2.Body_scaled.jpg" topImage="Peao2.Top_scaled.jpg"/>
+    </TargetSet>
+</VuforiaUnityInfo>
