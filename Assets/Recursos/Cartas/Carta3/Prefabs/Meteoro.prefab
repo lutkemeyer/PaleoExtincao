@@ -4762,9 +4762,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8650154666964444715}
-  - component: {fileID: 1520810930868761875}
   - component: {fileID: 5050391348550069741}
   - component: {fileID: 5550625127948205427}
+  - component: {fileID: 3819506260091489276}
   m_Layer: 0
   m_Name: Meteoro
   m_TagString: Untagged
@@ -4788,20 +4788,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1520810930868761875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650154666964444714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88eaa2332a89784c88da48fc1a182e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 200
-  impactPrefab: {fileID: 0}
 --- !u!54 &5050391348550069741
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4831,6 +4817,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.152745, y: 12.14053, z: 11.822751}
   m_Center: {x: -0.42362738, y: 0.68839455, z: 0.42362452}
+--- !u!114 &3819506260091489276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650154666964444714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc67c42a92f14143b8d41e28b6e80a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeVidaMax: 5
+  velocidade: 20
+  impactPrefab: {fileID: 0}
 --- !u!1001 &8650154667444677712
 PrefabInstance:
   m_ObjectHideFlags: 0
