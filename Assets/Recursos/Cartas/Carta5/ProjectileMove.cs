@@ -18,4 +18,18 @@ public class ProjectileMove : MonoBehaviour{
             rb.position += transform.forward * (speed * Time.deltaTime);
         }
     }
+
+    void OnCollisionEnter(Collision collision) {
+        speed = 0;
+
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        Vector3 pos = contact.point;
+
+        if (impactPrefab != null) {
+            
+        }
+        Debug.Log("Entrou");
+        Destroy(gameObject);
+    }
 }

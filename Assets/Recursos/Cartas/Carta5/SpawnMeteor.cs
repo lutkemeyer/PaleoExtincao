@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class SpawnMeteor : MonoBehaviour{
 
-    public GameObject vfx;
-    public Transform startPoint;
-    public Transform endPoint;
+    public float tempoDeSpawn = 3;
+    public GameObject meteoro;
+    public Transform pontoInicial;
+    public Transform pontoFinal;
+
+    private float tempoRestante;
 
     void Start(){
-        Vector3 startPos = startPoint.position;
-        GameObject objVFX = Instantiate(vfx, startPos, Quaternion.identity) as GameObject;
-        Vector3 endPos = endPoint.position;
-        RotateTo(objVFX, endPos);
+        tempoRestante = tempoDeSpawn;
+        Spawn();
+    }
+
+    private void Spawn() {
+        Vector3 startPos = pontoInicial.position;
+        GameObject meteoroInstanciado = Instantiate(meteoro, startPos, Quaternion.identity) as GameObject;
+        Vector3 endPos = pontoFinal.position;
+        RotateTo(meteoroInstanciado, endPos);
+    }
+
+    void Update() {
+        tempoRestante -= Time.deltaTime;
+        if (tempoRestante < 0) {
+            tempoRestante = tempoDeSpawn;
+            Spawn();
+        }
     }
 
     void RotateTo(GameObject obj, Vector3 destination){
