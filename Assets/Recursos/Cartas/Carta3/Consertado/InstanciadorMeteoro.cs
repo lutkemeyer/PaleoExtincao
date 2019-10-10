@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class InstanciadorMeteoro : MonoBehaviour{
 
-    public float tempoDeSpawn = 3;
     public GameObject meteoro;
     public Transform pontoFinal;
     public int distanciaMeteoro = 10;
-
-    private float tempoRestante;
 
     private GameObject meteoroAtual;
 
     void Start(){
         Spawn();
-        tempoRestante = tempoDeSpawn;
     }
 
     private void Spawn(){
@@ -29,15 +25,9 @@ public class InstanciadorMeteoro : MonoBehaviour{
         //meteoroInstanciado.transform.localRotation = Quaternion.Lerp(meteoroInstanciado.transform.rotation, rotation, 1);
     }
 
-    // Update is called once per frame
     void Update(){
-        if (meteoroAtual == null || meteoroAtual.Equals(null)) {
+        if (meteoroAtual == null) {
             Spawn();
-        }
-        tempoRestante -= Time.deltaTime;
-        if (tempoRestante < 0) {
-            tempoRestante = tempoDeSpawn;
-            //Spawn();
         }
     }
 }

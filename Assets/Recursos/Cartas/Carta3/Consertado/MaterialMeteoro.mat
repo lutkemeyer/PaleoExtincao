@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialLava
-  m_Shader: {fileID: 4800000, guid: 036402a4b0d5f4342bbf1b572714f64e, type: 3}
+  m_Name: MaterialMeteoro
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_E1B49FA5:
+        m_Texture: {fileID: 2800000, guid: c01c9a4bf85773446a0067b31741d605, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,22 +39,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Distort:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _LavaTex:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 6.1334796, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 531038125eae36e4e84167add651e636, type: 3}
-        m_Scale: {x: 1.1700001, y: 1.1700001}
-        m_Offset: {x: -0.11999953, y: 0}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -64,14 +60,20 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_17B6BB19: 0
+    - Vector1_1CB51B4F: 2.74
+    - Vector1_394770DB: 0.9
+    - Vector1_6DAF3447: 6
+    - Vector1_CA54073E: 0
+    - Vector1_D55816E1: 0
+    - Vector1_E0586544: 4.63
+    - Vector1_FBDCDB47: 0.53
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortX: 1
-    - _DistortY: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -83,5 +85,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.77448, b: 0, a: 1}
+    - Color_1D741FE9: {r: 0.8207547, g: 0.45925707, b: 0.16647384, a: 0}
+    - Color_431F4DE9: {r: 2, g: 0.34509805, b: 0, a: 0}
+    - Color_528A1D9C: {r: 3.9999318, g: 1.2774651, b: 0.35601488, a: 0}
+    - Vector2_EB533CA6: {r: 0.05, g: 0, b: 0, a: 0}
+    - Vector2_FADB0F25: {r: -0.05, g: 0.1, b: 0, a: 0}
+    - _Color: {r: 1, g: 0.5021179, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

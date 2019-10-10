@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovimentoMeteoroInfinito : MonoBehaviour{
 
-    public float velocidade;
-    public GameObject impactPrefab;
+    public float velocidade = 5;
+
     private Rigidbody rb;
 
     void Start() {
@@ -31,9 +31,6 @@ public class MovimentoMeteoroInfinito : MonoBehaviour{
         ContactPoint contact = collision.contacts[0];
         Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
-        if (impactPrefab != null) {
-
-        }
         Debug.Log("colidiu");
         Destroy(gameObject);
     }
