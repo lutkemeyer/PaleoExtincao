@@ -20,15 +20,19 @@ public class MovimentoMeteoro : MonoBehaviour{
             rb.position += (transform.up * -1) * (velocidade * Time.deltaTime);
         }
     }
-    void OnTriggerEnter(Collider other) {
+    private void OnCollisionEnter(Collision collision) {
         autoDestruir();
-    }
-    void OnCollisionEnter(Collision collision) {
+        GameObject.Find("MeteoroNaTerra").GetComponent<InstanciadorMeteoro>().colidiu();
+        //Debug.Log(collision.collider.name);
         
-        ContactPoint contact = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        Vector3 pos = contact.point;
-        Debug.Log("colidiu");
+        //ContactPoint contact = collision.contacts[0];
+
+        //ParticleSystem pd = Instantiate(, posicaoInicial, Quaternion.identity) as GameObject;
+
+        //contact.point
+        //Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        //Vector3 pos = contact.point;
+        
         
     }
 

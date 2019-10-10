@@ -5,6 +5,7 @@ using UnityEngine;
 public class InstanciadorMeteoro : MonoBehaviour{
 
     public GameObject meteoro;
+
     public Transform pontoFinal;
     public int distanciaMeteoro = 10;
 
@@ -24,6 +25,10 @@ public class InstanciadorMeteoro : MonoBehaviour{
         //Vector3 direction = posicaoFinal - meteoroInstanciado.transform.position;
         //Quaternion rotation = Quaternion.LookRotation(direction);
         //meteoroInstanciado.transform.localRotation = Quaternion.Lerp(meteoroInstanciado.transform.rotation, rotation, 1);
+    }
+
+    public void colidiu() {
+        GameObject.Find("ParticulaEstilhacos").GetComponent<ParticleSystem>().Play();
     }
 
     void Update(){
