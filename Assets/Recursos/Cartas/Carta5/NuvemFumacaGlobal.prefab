@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4200051823978560502}
   - component: {fileID: 4200051823978560392}
   m_Layer: 0
-  m_Name: FormatoGolbo
+  m_Name: FormatoGlobo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4200051823978560393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.387207, y: -0.11445247, z: -0.474563}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2849537625757950242}
@@ -100,17 +100,17 @@ PrefabInstance:
     - target: {fileID: 522788578068255030, guid: 7b1ebec72d10a044c929a86945e486bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.387207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 522788578068255030, guid: 7b1ebec72d10a044c929a86945e486bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11754753
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 522788578068255030, guid: 7b1ebec72d10a044c929a86945e486bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.680563
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 522788578068255030, guid: 7b1ebec72d10a044c929a86945e486bb,
         type: 3}

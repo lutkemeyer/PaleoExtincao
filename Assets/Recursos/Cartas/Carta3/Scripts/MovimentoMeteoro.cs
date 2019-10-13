@@ -23,17 +23,6 @@ public class MovimentoMeteoro : MonoBehaviour{
     private void OnCollisionEnter(Collision collision) {
         autoDestruir();
         GameObject.Find("MeteoroNaTerra").GetComponent<InstanciadorMeteoro>().colidiu();
-        //Debug.Log(collision.collider.name);
-        
-        //ContactPoint contact = collision.contacts[0];
-
-        //ParticleSystem pd = Instantiate(, posicaoInicial, Quaternion.identity) as GameObject;
-
-        //contact.point
-        //Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        //Vector3 pos = contact.point;
-        
-        
     }
 
     private void autoDestruir() {
