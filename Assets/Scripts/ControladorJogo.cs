@@ -30,6 +30,7 @@ public class ControladorJogo : MonoBehaviour{
      * ser reconhecido pelo vuforia
      */
     void Start() {
+        pnInstrucao.SetActive(false);
         if (personagens.Length > 0 && peoes.Length > 0) {
             int indexPersonagem = ControladorCenas.getParametro(ControladorCenas.PERSONAGEM);
             int indexPeao = ControladorCenas.getParametro(ControladorCenas.PEAO);
@@ -52,7 +53,7 @@ public class ControladorJogo : MonoBehaviour{
      * acessa o controlador de estados do botao, e se houver, faz
      * a mudança de estado, e acessa o painel alterando sua visibilidade
      */
-    public void OnClickInstrucoes() {
+    public void OnClickInstrucao() {
         GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
         if (btnInstrucao != null) {
             ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
