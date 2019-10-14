@@ -6,6 +6,11 @@ TagManager:
   tags:
   - BtnInstrucao
   - PnInstrucao
+  - TxtDescricao
+  - ImgDinossauro
+  - TxtFamilia
+  - TxtNomeDinossauro
+  - PnDinossauro
   layers:
   - Default
   - TransparentFX

@@ -15,11 +15,12 @@ public class RotacionadorAutomatico : MonoBehaviour{
             rotacaoCorrigida.x = rotacao3eixos.x;
         }
         if (EixoY) {
-            rotacaoCorrigida.y = rotacao3eixos.y;
+            rotacaoCorrigida.y = rotacao3eixos.y + 180;
         }
         if (EixoZ) {
             rotacaoCorrigida.z = rotacao3eixos.z;
         }
         transform.rotation = rotacaoCorrigida;
+        
     }
 }

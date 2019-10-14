@@ -19,18 +19,11 @@ public class ControladorJogo : MonoBehaviour{
     public GameObject[] personagens;
 
     /*
-     * painel de instrução que é ativado ou desativado 
-     * através do botao de instrução
-     */
-    public GameObject pnInstrucao;
-
-    /*
      * Assim que a classe é instanciada, as variáveis de seleção
      * do dino e do peão é carregada, e atrelado, para que possa 
      * ser reconhecido pelo vuforia
      */
     void Start() {
-        pnInstrucao.SetActive(false);
         if (personagens.Length > 0 && peoes.Length > 0) {
             int indexPersonagem = ControladorCenas.getParametro(ControladorCenas.PERSONAGEM);
             int indexPeao = ControladorCenas.getParametro(ControladorCenas.PEAO);
@@ -45,7 +38,12 @@ public class ControladorJogo : MonoBehaviour{
      * de seleção
      */
     public void OnClickVoltar() {
-        ControladorCenas.carregaCena(ControladorCenas.CENA_MENU);
+        GameObject pnDinossauro = GameObject.FindGameObjectWithTag("PnDinossauro");
+        if (pnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
+            pnDinossauro.GetComponent<AnimadorAbrirFechar>().fechar();
+        } else {
+            ControladorCenas.carregaCena(ControladorCenas.CENA_MENU);
+        }
     }
 
     /*
@@ -54,15 +52,18 @@ public class ControladorJogo : MonoBehaviour{
      * a mudança de estado, e acessa o painel alterando sua visibilidade
      */
     public void OnClickInstrucao() {
-        GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
-        if (btnInstrucao != null) {
-            ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
-            if (controladorEstadosBotao != null) {
-                controladorEstadosBotao.mudarEstado();
+        if (!GameObject.FindGameObjectWithTag("PnDinossauro").GetComponent<AnimadorAbrirFechar>().isAberto()) {
+            GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
+            if (btnInstrucao != null) {
+                ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
+                if (controladorEstadosBotao != null) {
+                    controladorEstadosBotao.mudarEstado();
+                }
             }
-        }
-        if (pnInstrucao != null) {
-            pnInstrucao.SetActive(!pnInstrucao.activeSelf);
+            GameObject pnInstrucao = GameObject.FindGameObjectWithTag("PnInstrucao");
+            if (pnInstrucao != null) {
+                pnInstrucao.GetComponent<AnimadorAbrirFechar>().abrirOuFechar();
+            }
         }
     }
 }

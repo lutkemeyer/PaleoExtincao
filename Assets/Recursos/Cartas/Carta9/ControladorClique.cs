@@ -7,50 +7,55 @@ public class ControladorClique : MonoBehaviour{
 
     public GameObject[] objetos;
     public Sprite[] imagens;
-    public Canvas visualizador;
-    public AnimadorImagem animadorImagem;
-    public RepositorioConteudo repositorioConteudo;
-    public Text txtTitulo, txtTexto;
+
+    private RepositorioConteudo repositorioConteudo;
+    private GameObject pnDinossauro;
 
     void Start(){
-        animadorImagem = new AnimadorImagem(visualizador);
+        pnDinossauro = GameObject.FindGameObjectWithTag("PnDinossauro");
         repositorioConteudo = new RepositorioConteudo(imagens);
     }
     void Update(){
-        if (Input.GetMouseButtonDown(0)) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
-                string nome = hit.transform.name;
-                for (int i = 0; i < objetos.Length; i++) {
-                    if (objetos[i].name.Equals(nome)) {
-                        funcao(i);
+        if (!pnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
+            if (Input.GetMouseButtonDown(0)) {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit)) {
+                    string nome = hit.transform.name;
+                    for (int i = 0; i < objetos.Length; i++) {
+                        if (objetos[i].name.Equals(nome)) {
+                            funcao(i);
+                        }
+                    }
+                }
+            }
+            if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit)) {
+                    string nome = hit.transform.name;
+                    for (int i = 0; i < objetos.Length; i++) {
+                        if (objetos[i].name.Equals(nome)) {
+                            funcao(i);
+                        }
                     }
                 }
             }
         }
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
-                string nome = hit.transform.name;
-                for (int i = 0; i<objetos.Length; i++) {
-                    if (objetos[i].name.Equals(nome)) {
-                        funcao(i);
-                    }
-                }
-            }
-        }
-        animadorImagem.Update();
     }
     public void funcao(int index) {
-        FamiliaDinossauro familia = repositorioConteudo.get(index);
-        visualizador.GetComponent<Image>().sprite = familia.GetSprite();
-        txtTitulo.GetComponent<Text>().text = familia.getTitulo();
-        txtTexto.GetComponent<Text>().text = familia.getTexto();
-        animadorImagem.abrir();
+        setDinossauro(repositorioConteudo.get(index));
+        pnDinossauro.GetComponent<AnimadorAbrirFechar>().abrir();
+        GameObject.FindGameObjectWithTag("PnDinossauro").GetComponent<AnimadorAbrirFechar>().abrir();
     }
-    public void OnClick() {
-        animadorImagem.fechar();
+    public void setDinossauro(Dinossauro dinossauro){
+        Image imgDinossauro = GameObject.FindGameObjectWithTag("ImgDinossauro").GetComponent<Image>();
+        Text txtNomeDinossauro = GameObject.FindGameObjectWithTag("TxtNomeDinossauro").GetComponent<Text>();
+        Text txtDescricao = GameObject.FindGameObjectWithTag("TxtDescricao").GetComponent<Text>();
+        Text txtFamilia = GameObject.FindGameObjectWithTag("TxtFamilia").GetComponent<Text>();
+        imgDinossauro.sprite = dinossauro.getSprite();
+        txtNomeDinossauro.text = dinossauro.getNome();
+        txtDescricao.text = dinossauro.getDescricao();
+        txtFamilia.text = dinossauro.getFamilia();
     }
 }
