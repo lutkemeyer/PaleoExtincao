@@ -15,7 +15,7 @@ public class RotacionadorAutomatico : MonoBehaviour{
             rotacaoCorrigida.x = rotacao3eixos.x;
         }
         if (EixoY) {
-            rotacaoCorrigida.y = rotacao3eixos.y + 180;
+            rotacaoCorrigida.y = rotacao3eixos.y;
         }
         if (EixoZ) {
             rotacaoCorrigida.z = rotacao3eixos.z;

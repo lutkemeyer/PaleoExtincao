@@ -52,18 +52,26 @@ public class ControladorJogo : MonoBehaviour{
      * a mudança de estado, e acessa o painel alterando sua visibilidade
      */
     public void OnClickInstrucao() {
-        if (!GameObject.FindGameObjectWithTag("PnDinossauro").GetComponent<AnimadorAbrirFechar>().isAberto()) {
-            GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
-            if (btnInstrucao != null) {
-                ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
-                if (controladorEstadosBotao != null) {
-                    controladorEstadosBotao.mudarEstado();
+        GameObject PnDinossauro = GameObject.FindGameObjectWithTag("PnDinossauro");
+        if(PnDinossauro != null) {
+            if (!PnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
+                Debug.Log("pnDinossauro esta fechado");
+                GameObject btnInstrucao = GameObject.FindWithTag(Tags.CenaJogo.BtnInstrucao);
+                if (btnInstrucao != null) {
+                    ControladorEstadosBotao controladorEstadosBotao = btnInstrucao.GetComponent<ControladorEstadosBotao>();
+                    if (controladorEstadosBotao != null) {
+                        controladorEstadosBotao.mudarEstado();
+                    }
                 }
+                GameObject pnInstrucao = GameObject.FindGameObjectWithTag("PnInstrucao");
+                if (pnInstrucao != null) {
+                    pnInstrucao.GetComponent<AnimadorAbrirFechar>().abrirOuFechar();
+                }
+            } else {
+                Debug.Log("pnDinossauro esta aberto");
             }
-            GameObject pnInstrucao = GameObject.FindGameObjectWithTag("PnInstrucao");
-            if (pnInstrucao != null) {
-                pnInstrucao.GetComponent<AnimadorAbrirFechar>().abrirOuFechar();
-            }
+        } else {
+            Debug.Log("pnDinossauro nao foi encontrado");
         }
     }
 }

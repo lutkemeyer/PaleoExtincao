@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectorTrackCarta3 : ControladorDeteccaoAR{
+
+    public GameObject PrefMeteoroNaTerra;
+
     public override void onApareceu() {
-        GameObject.Find("MeteoroNaTerra").GetComponent<InstanciadorMeteoro>().startInstance();
+        PrefMeteoroNaTerra.GetComponent<InstanciadorMeteoro>().startInstance();
     }
     public override void onDesapareceu() {
-        GameObject.Find("MeteoroNaTerra").GetComponent<InstanciadorMeteoro>().stopInstance();
+        PrefMeteoroNaTerra.GetComponent<InstanciadorMeteoro>().stopInstance();
     }
     public override void onNaoApareceu() {
     }

@@ -16,7 +16,8 @@ public class ControladorClique : MonoBehaviour{
         repositorioConteudo = new RepositorioConteudo(imagens);
     }
     void Update(){
-        if (!pnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
+        if(!pnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
+            /*
             if (Input.GetMouseButtonDown(0)) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -29,6 +30,7 @@ public class ControladorClique : MonoBehaviour{
                     }
                 }
             }
+            */
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hit;

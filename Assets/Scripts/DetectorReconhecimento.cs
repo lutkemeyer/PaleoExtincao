@@ -11,13 +11,6 @@ public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
     // botão que ativa / desativa o painel de instrução
     public Button btnInstrucoes; 
 
-    /* 
-     * painel de instruções que será ativado / desativado
-     * se o rastreio funcionar
-     */
-
-    public GameObject painelInstrucoes;
-
     /*
      * Insere uma instancia desta classe como listener
      * do rastreador de imagens do vuforia
@@ -41,9 +34,12 @@ public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
-            if (painelInstrucoes.active) {
-                btnInstrucoes.onClick.Invoke();
+
+            GameObject pnInstrucao = GameObject.FindGameObjectWithTag("PnInstrucao");
+            if (pnInstrucao != null) {
+                pnInstrucao.GetComponent<AnimadorAbrirFechar>().fechar();
             }
+
         }
     }
 }

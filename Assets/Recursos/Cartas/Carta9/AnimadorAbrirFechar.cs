@@ -23,9 +23,6 @@ public class AnimadorAbrirFechar : MonoBehaviour{
             } else if (fechando) {
                 porcAnim -= Time.deltaTime / segundosAnimacao;
             }
-            //Color cor = gameObject.GetComponent<Image>().color;
-            //cor.a = porcAnim * 10;
-            //gameObject.GetComponent<Image>().color = cor;
         }
         if (porcAnim > 1) {
             abrindo = false;
@@ -34,12 +31,9 @@ public class AnimadorAbrirFechar : MonoBehaviour{
             fechando = false;
             aberto = false;
             gameObject.transform.localScale = Vector3.zero;
-            //objeto.SetActive(false);
         }
     }
     public void abrir() {
-        //gameObject.transform.localScale = Vector3.one;
-        //objeto.SetActive(true);
         if (!aberto) {
             abrindo = true;
         }
