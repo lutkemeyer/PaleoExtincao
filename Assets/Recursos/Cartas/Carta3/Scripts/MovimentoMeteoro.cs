@@ -22,7 +22,7 @@ public class MovimentoMeteoro : MonoBehaviour{
     }
     private void OnCollisionEnter(Collision collision) {
         autoDestruir();
-        GameObject.Find("MeteoroNaTerra").GetComponent<InstanciadorMeteoro>().colidiu();
+        GameObject.Find("PrefMeteoroColidindoTerra").GetComponent<InstanciadorMeteoro>().colidiu();
     }
 
     private void autoDestruir() {

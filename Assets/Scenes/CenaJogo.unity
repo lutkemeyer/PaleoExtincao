@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 111215307}
   - component: {fileID: 111215309}
   - component: {fileID: 111215308}
+  - component: {fileID: 111215310}
   m_Layer: 0
   m_Name: NomeSaurisquios
   m_TagString: Untagged
@@ -602,6 +603,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &111215310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111215306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a07190ee668003498360180b3ab2a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alvo: {fileID: 246542882}
+  EixoX: 0
+  EixoY: 1
+  EixoZ: 0
 --- !u!1 &152223045
 GameObject:
   m_ObjectHideFlags: 0
