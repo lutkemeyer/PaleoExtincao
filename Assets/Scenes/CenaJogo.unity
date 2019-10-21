@@ -7155,6 +7155,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4674844365233270025, guid: 9458328f50898ac4badaa9a4a8c0b329,
         type: 3}
+    - target: {fileID: 2292293186479785689, guid: ab37ee0031a51464f822f8db328dba9a,
+        type: 3}
+      propertyPath: distanciaMeteoro
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4642284942745092413, guid: ab37ee0031a51464f822f8db328dba9a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -7175,6 +7180,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ModeloTerra
       objectReference: {fileID: 0}
+    - target: {fileID: 6339988401093098664, guid: ab37ee0031a51464f822f8db328dba9a,
+        type: 3}
+      propertyPath: alvo
+      value: 
+      objectReference: {fileID: 246542882}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab37ee0031a51464f822f8db328dba9a, type: 3}
 --- !u!1001 &2789197025149843873
