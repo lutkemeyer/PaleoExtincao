@@ -3539,6 +3539,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6980194402670624990, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980194402670624990, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980194402670624990, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0.34498838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0.34498838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487353871008197968, guid: 1b3c6e7566e7d064bbea2f87df09e6de,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outWeight
+      value: 0.16953297
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b3c6e7566e7d064bbea2f87df09e6de, type: 3}
 --- !u!4 &1307030948 stripped

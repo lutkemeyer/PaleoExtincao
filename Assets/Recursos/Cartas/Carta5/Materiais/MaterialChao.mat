@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MaterialChao
-  m_Shader: {fileID: 4800000, guid: 6a151f652f5ba03458e9a7cd03ae88e8, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -46,9 +46,9 @@ Material:
     - _LavaTex:
         m_Texture: {fileID: 2800000, guid: 531038125eae36e4e84167add651e636, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 3.9246256, y: 0}
+        m_Offset: {x: 2.784007, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dd4c5bf0b09b0a5479a25cd9cc15220a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 631e198caa222f042a0d3239fafa0acd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -71,7 +71,7 @@ Material:
     - _DistortY: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0

@@ -59,6 +59,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticulaFumacaPequena
       objectReference: {fileID: 0}
+    - target: {fileID: 9194681113393286226, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1813464254964785933, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,17 +308,32 @@ PrefabInstance:
     - target: {fileID: 1813464254964785933, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1813464254964785933, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1813464254964785933, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590603375085342339, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590603375085342339, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590603375085342339, guid: c9db25002cfe32a47aeeac4ea1ccac6d,
+        type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9db25002cfe32a47aeeac4ea1ccac6d, type: 3}
