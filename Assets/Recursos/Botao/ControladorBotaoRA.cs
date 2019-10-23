@@ -14,6 +14,7 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
         gameObject.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
     }
     void Update() {
+        /*
         if (Input.GetMouseButtonDown(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -22,6 +23,7 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
                 animacaoTocar();
             }
         }
+        */
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
