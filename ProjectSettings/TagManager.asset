@@ -11,6 +11,7 @@ TagManager:
   - TxtFamilia
   - TxtNomeDinossauro
   - PnDinossauro
+  - TxtTitulo
   layers:
   - Default
   - TransparentFX

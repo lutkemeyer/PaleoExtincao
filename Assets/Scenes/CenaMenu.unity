@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.71168756, g: 0.77028364, b: 0.8342473, a: 1}
+  m_IndirectSpecularColor: {r: 0.71124524, g: 0.770286, b: 0.8340358, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,7 +245,6 @@ MonoBehaviour:
   peoes:
   - {fileID: 887175635}
   - {fileID: 40591626}
-  cabecalho: {fileID: 661085771}
   btnVoltar: {fileID: 1448583453}
 --- !u!1001 &40591624
 PrefabInstance:
@@ -452,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304571811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15.39}
+  m_LocalPosition: {x: 0, y: 7.15, z: 15.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1588173044}
@@ -647,7 +646,7 @@ GameObject:
   - component: {fileID: 661085771}
   m_Layer: 5
   m_Name: TxtTitulo
-  m_TagString: Untagged
+  m_TagString: TxtTitulo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -704,7 +703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SELECIONE SEU PERSONAGEM
+  m_Text: ESCOLHA SEU PERSONAGEM
 --- !u!222 &661085772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -798,7 +797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 10.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -983,7 +982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 8.15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1060,14 +1059,13 @@ GameObject:
   - component: {fileID: 1448583453}
   - component: {fileID: 1448583456}
   - component: {fileID: 1448583457}
-  - component: {fileID: 1448583458}
   m_Layer: 5
   m_Name: BtnVoltar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1448583452
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1213,19 +1211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   som: {fileID: 8300000, guid: c31030c91aebe324bb7ba54727cdac63, type: 3}
---- !u!114 &1448583458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448583451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867c157e65935064aa57eee7a9a7a5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprEstados: []
 --- !u!1 &1588173043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1955,7 @@ PrefabInstance:
     - target: {fileID: 4158466193361181490, guid: 8ddaa8bd995c4754a8033b24d000e85d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.894552
+      value: 2.2554479
       objectReference: {fileID: 0}
     - target: {fileID: 4158466193361181490, guid: 8ddaa8bd995c4754a8033b24d000e85d,
         type: 3}

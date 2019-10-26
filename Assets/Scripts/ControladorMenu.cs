@@ -18,23 +18,11 @@ public class ControladorMenu : MonoBehaviour{
     public GameObject[] peoes;
 
     /*
-     * label do título para ser alterado quando
-     * o usuário selecionar um dinossauro
-     */
-    public Text cabecalho;
-
-    /*
      * botão de voltar do menu, para que seja 
      * desativado / ativado quando está selecionando
      * um dino / peão
      */
     public Button btnVoltar;
-
-    /*
-     * variáveis que guardam a posição de seleção
-     * dos dinossauros / peões
-     */
-    private int indexPersonagem = 0, indexPeao = 0;
 
     /* 
      * variável que controla se o usuário
@@ -42,40 +30,22 @@ public class ControladorMenu : MonoBehaviour{
      */
     private bool isSelecionandoDino = true;
 
-    /*
-     * inicializa a classe tornando o botão de voltar 
-     * desabilitado, para ser ativado somente após
-     * a seleção de um dino
-     */
-    void Start() {
-        btnVoltar.interactable = false;
-    }
+    private CarrosselObjetos carrosselDinossauros;
+    private CarrosselObjetos carrosselPeoes;
 
+    public void Start() {
+        carrosselDinossauros = new CarrosselObjetos(personagens);
+        carrosselPeoes = new CarrosselObjetos(peoes);
+    }
     /*
      * método que troca o objeto para o próximo
      * item do vetor, seja ele um dino ou um peão
      */
     public void OnClickDireita() {
-        if (isSelecionandoDino) {
-            if (indexPersonagem < (personagens.Length - 1)) {
-                personagens[indexPersonagem].SetActive(false);
-                indexPersonagem++;
-                personagens[indexPersonagem].SetActive(true);
-            } else {
-                personagens[indexPersonagem].SetActive(false);
-                indexPersonagem = 0;
-                personagens[indexPersonagem].SetActive(true);
-            }
+        if (isSelecionandoDino){
+            carrosselDinossauros.passarParaDireita();
         } else {
-            if (indexPeao < (peoes.Length - 1)) {
-                peoes[indexPeao].SetActive(false);
-                indexPeao++;
-                peoes[indexPeao].SetActive(true);
-            } else {
-                peoes[indexPeao].SetActive(false);
-                indexPeao = 0;
-                peoes[indexPeao].SetActive(true);
-            }
+            carrosselPeoes.passarParaDireita();
         }
     }
     /*
@@ -84,25 +54,9 @@ public class ControladorMenu : MonoBehaviour{
      */
     public void OnClickEsquerda() {
         if (isSelecionandoDino) {
-            if (indexPersonagem > 0) {
-                personagens[indexPersonagem].SetActive(false);
-                indexPersonagem--;
-                personagens[indexPersonagem].SetActive(true);
-            } else {
-                personagens[indexPersonagem].SetActive(false);
-                indexPersonagem = personagens.Length - 1;
-                personagens[indexPersonagem].SetActive(true);
-            }
+            carrosselDinossauros.passarParaEsquerda();
         } else {
-            if (indexPeao > 0) {
-                peoes[indexPeao].SetActive(false);
-                indexPeao--;
-                peoes[indexPeao].SetActive(true);
-            } else {
-                peoes[indexPeao].SetActive(false);
-                indexPeao = peoes.Length - 1;
-                peoes[indexPeao].SetActive(true);
-            }
+            carrosselPeoes.passarParaEsquerda();
         }
     }
 
@@ -113,14 +67,14 @@ public class ControladorMenu : MonoBehaviour{
      */
     public void OnClickSelecionar() {
         if (isSelecionandoDino) {
-            btnVoltar.interactable = true;
+            btnVoltar.gameObject.SetActive(true);
             isSelecionandoDino = false;
-            personagens[indexPersonagem].SetActive(false);
-            peoes[indexPeao].SetActive(true);
-            cabecalho.text = "ESCOLHA SEU PEÃO";
+            carrosselDinossauros.setActive(false);
+            carrosselPeoes.setActive(true);
+            setTitulo("ESCOLHA SEU PEÃO");
         } else {
-            ControladorCenas.addParametro(ControladorCenas.PERSONAGEM, indexPersonagem);
-            ControladorCenas.addParametro(ControladorCenas.PEAO, indexPeao);
+            ControladorCenas.addParametro(ControladorCenas.PERSONAGEM, carrosselDinossauros.getIndice());
+            ControladorCenas.addParametro(ControladorCenas.PEAO, carrosselPeoes.getIndice());
             ControladorCenas.carregaCena(ControladorCenas.CENA_JOGO);
         }
     }
@@ -129,10 +83,21 @@ public class ControladorMenu : MonoBehaviour{
      * volta a opção de seleção de peão para dino, desativando o botão
      */
     public void OnClickVoltar() {
-        cabecalho.text = "ESCOLHA SEU PERSONAGEM";
-        btnVoltar.interactable = false;
+        setTitulo("ESCOLHA SEU PERSONAGEM");
+        btnVoltar.gameObject.SetActive(false);
         isSelecionandoDino = true;
-        peoes[indexPeao].SetActive(false);
-        personagens[indexPersonagem].SetActive(true);
+        carrosselDinossauros.setActive(true);
+        carrosselPeoes.setActive(false);
     }
+
+    /*
+     * Muda o título para o texto que for passado como parâmetro
+     */
+    private void setTitulo(string texto) {
+        GameObject txtTitulo = GameObject.FindGameObjectWithTag("TxtTitulo");
+        if(txtTitulo != null) {
+            txtTitulo.GetComponent<Text>().text = texto;
+        }
+    }
+
 }
