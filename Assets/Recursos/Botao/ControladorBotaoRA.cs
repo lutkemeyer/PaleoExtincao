@@ -8,13 +8,19 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
     public GameObject[] objetos;
     public GameObject prefabBotao;
 
+    private CarrosselObjetos carrosselObjetos;
+
     private int index = 0;
 
     void Start() {
         gameObject.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
+        carrosselObjetos = new CarrosselObjetos(objetos);
     }
     void Update() {
         /*
+        
+        // USADO PARA CAPTAR O CLIQUE DO MOUSE QUANDO ESTÁ EM DEBUG NO UNITY  
+
         if (Input.GetMouseButtonDown(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -28,18 +34,13 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
-                mudarObjeto();
+                carrosselObjetos.passarParaDireita();
                 animacaoTocar();
             }
         }
     }
-    private void mudarObjeto() {
-        objetos[index].SetActive(false);
-        index = (index == (objetos.Length - 1)) ? 0 : (index + 1);
-        objetos[index].SetActive(true);
-    }
     public void OnButtonPressed(VirtualButtonBehaviour vb) {
-        mudarObjeto();
+        carrosselObjetos.passarParaDireita();
         animacaoPressionar();
     }
     public void OnButtonReleased(VirtualButtonBehaviour vb) {

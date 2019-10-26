@@ -30,6 +30,10 @@ public class ControladorMenu : MonoBehaviour{
      */
     private bool isSelecionandoDino = true;
 
+    /*
+     * Variáveis que controlam a seleção 
+     * dos objetos no menu
+     */
     private CarrosselObjetos carrosselDinossauros;
     private CarrosselObjetos carrosselPeoes;
 
