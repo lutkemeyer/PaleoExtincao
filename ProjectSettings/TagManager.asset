@@ -9,9 +9,9 @@ TagManager:
   - TxtDescricao
   - ImgDinossauro
   - TxtFamilia
-  - TxtNomeDinossauro
   - PnDinossauro
   - TxtTitulo
+  - TxtGenero
   layers:
   - Default
   - TransparentFX

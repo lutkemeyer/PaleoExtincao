@@ -16,25 +16,25 @@ public class CarrosselObjetos{
     }
 
     public void passarParaDireita() {
-        objetos[indiceAtivo].active = false;
+        objetos[indiceAtivo].SetActive(false);
         if (indiceAtivo == (tamanho-1)) {
             indiceAtivo = 0;
         } else {
             indiceAtivo++;
         }
-        objetos[indiceAtivo].active = true;
+        objetos[indiceAtivo].SetActive(true);
     }
     public void passarParaEsquerda() {
-        objetos[indiceAtivo].active = false;
+        objetos[indiceAtivo].SetActive(false);
         if (indiceAtivo == 0) {
             indiceAtivo = (tamanho-1);
         } else {
             indiceAtivo--;
         }
-        objetos[indiceAtivo].active = true;
+        objetos[indiceAtivo].SetActive(true);
     }
     public void setActive(bool ativar) {
-        objetos[indiceAtivo].active = ativar;
+        objetos[indiceAtivo].SetActive(ativar);
     }
     public int getIndice() {
         return indiceAtivo;
