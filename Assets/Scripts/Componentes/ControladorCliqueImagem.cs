@@ -13,12 +13,12 @@ public class ControladorCliqueImagem : MonoBehaviour{
     private GameObject pnDinossauro;
 
     void Start(){
-        pnDinossauro = GameObject.FindGameObjectWithTag("PnDinossauro");
+        pnDinossauro = GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.PnDinossauro);
         repositorioConteudo = new RepositorioConteudo(imagens);
     }
     void Update(){
         if(!pnDinossauro.GetComponent<AnimadorAbrirFechar>().isAberto()) {
-            
+            /*
             if (Input.GetMouseButtonDown(0)) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -31,7 +31,7 @@ public class ControladorCliqueImagem : MonoBehaviour{
                     }
                 }
             }
-            
+            */
             if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hit;
@@ -49,12 +49,12 @@ public class ControladorCliqueImagem : MonoBehaviour{
     public void funcao(int index) {
         setGeneroDinossauro(repositorioConteudo.get(index));
         pnDinossauro.GetComponent<AnimadorAbrirFechar>().abrir();
-        GameObject.FindGameObjectWithTag("PnDinossauro").GetComponent<AnimadorAbrirFechar>().abrir();
+        GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.PnDinossauro).GetComponent<AnimadorAbrirFechar>().abrir();
     }
     public void setGeneroDinossauro(GeneroDinossauro dinossauro){
-        GameObject.FindGameObjectWithTag("ImgDinossauro").GetComponent<Image>().sprite = dinossauro.getSprite();
-        GameObject.FindGameObjectWithTag("TxtGenero").GetComponent<Text>().text = dinossauro.getNomeGenero().ToUpper();
-        GameObject.FindGameObjectWithTag("TxtFamilia").GetComponent<Text>().text = dinossauro.getFamilia().ToUpper();
-        GameObject.FindGameObjectWithTag("TxtDescricao").GetComponent<TextMeshProUGUI>().text = dinossauro.getDescricao();
+        GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.ImgDinossauro).GetComponent<Image>().sprite = dinossauro.getSprite();
+        GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.TxtGenero).GetComponent<Text>().text = dinossauro.getNomeGenero().ToUpper();
+        GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.TxtFamilia).GetComponent<Text>().text = dinossauro.getFamilia().ToUpper();
+        GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.TxtDescricao).GetComponent<TextMeshProUGUI>().text = dinossauro.getDescricao();
     }
 }

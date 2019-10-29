@@ -6,7 +6,7 @@ using Vuforia;
 public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
 
     public GameObject[] objetos;
-    public GameObject prefabBotao;
+    public GameObject prefBotao;
 
     private CarrosselObjetos carrosselObjetos;
 
@@ -48,12 +48,12 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
     }
 
     private void animacaoTocar() {
-        prefabBotao.GetComponent<Animator>().Play("tocar");
+        prefBotao.GetComponent<Animator>().Play("tocar");
     }
     private void animacaoPressionar() {
-        prefabBotao.GetComponent<Animator>().Play("pressionar");
+        prefBotao.GetComponent<Animator>().Play("pressionar");
     }
     private void animacaoSoltar() {
-        prefabBotao.GetComponent<Animator>().Play("soltar");
+        prefBotao.GetComponent<Animator>().Play("soltar");
     }
 }

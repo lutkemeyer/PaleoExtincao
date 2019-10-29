@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2504083059434710644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7522043718448238028}
+  m_Layer: 0
+  m_Name: InicioTrajeto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7522043718448238028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504083059434710644}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -44.3, y: 26.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3715686027050901631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4158466193361181489
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,9 +61,56 @@ Transform:
   - {fileID: 7085415234103526350}
   - {fileID: 722609043647263509}
   - {fileID: 8993514967464527640}
+  - {fileID: 3715686027050901631}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8692111156537275597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3715686027050901631}
+  - component: {fileID: 1314219195666188788}
+  m_Layer: 0
+  m_Name: LocalPassaros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3715686027050901631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692111156537275597}
+  m_LocalRotation: {x: -0, y: -0.0558212, z: 0, w: -0.9984408}
+  m_LocalPosition: {x: 0, y: 0, z: 37.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7522043718448238028}
+  m_Father: {fileID: 4158466193361181490}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 366.4, z: 0}
+--- !u!114 &1314219195666188788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692111156537275597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72eebe6fe65f8494db3b5323e582ea89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InicioTrajeto: {fileID: 7522043718448238028}
+  passaro: {fileID: 8604010948745697774, guid: c17cbd466d7397d4b80d85e42172c1f0, type: 3}
 --- !u!1001 &1210317259705421545
 PrefabInstance:
   m_ObjectHideFlags: 0
