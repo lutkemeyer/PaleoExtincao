@@ -6,6 +6,7 @@ public class TagsUI{
     public class CenaMenu{
         public const string BtnInstrucao = "BtnSelecionar";
         public const string BtnVoltar = "BtnVoltar";
+        public const string TxtTitulo = "TxtTitulo";
     }
     public class CenaJogo{
         public const string BtnInstrucao = "BtnInstrucao";

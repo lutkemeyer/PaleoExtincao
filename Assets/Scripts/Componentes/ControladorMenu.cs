@@ -70,6 +70,8 @@ public class ControladorMenu : MonoBehaviour{
      * e as mesmas serem possíveis de ser acessadas
      */
     public void OnClickSelecionar() {
+        //txtTitulo.GetComponent<Text>().text = "aaaaaa";
+        ///*
         if (isSelecionandoDino) {
             btnVoltar.gameObject.SetActive(true);
             isSelecionandoDino = false;
@@ -81,6 +83,7 @@ public class ControladorMenu : MonoBehaviour{
             ControladorCenas.addParametro(ControladorCenas.PEAO, carrosselPeoes.getIndice());
             ControladorCenas.carregaCena(ControladorCenas.CENA_JOGO);
         }
+        //*/
     }
     
     /*
@@ -98,9 +101,9 @@ public class ControladorMenu : MonoBehaviour{
      * Muda o título para o texto que for passado como parâmetro
      */
     private void setTitulo(string texto) {
-        GameObject txtTitulo = GameObject.FindGameObjectWithTag("TxtTitulo");
-        if(txtTitulo != null) {
-            txtTitulo.GetComponent<Text>().text = texto;
+        GameObject tag = GameObject.FindGameObjectWithTag(TagsUI.CenaMenu.TxtTitulo);
+        if(tag != null) {
+            tag.GetComponent<Text>().text = texto;
         }
     }
 

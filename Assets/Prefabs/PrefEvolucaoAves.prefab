@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 6067671237312005966}
   - component: {fileID: 4958826780872063422}
   m_Layer: 0
-  m_Name: PrefArvoreEvolutiva
+  m_Name: PrefEvolucaoAves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,6 +571,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 746579407bd62974191e2f388e1b60fc, type: 3}
   - {fileID: 21300000, guid: 974a93305a56c8845a6f199558e9c07d, type: 3}
   - {fileID: 21300000, guid: 48ac48019838a2047a846cf8ad33ad46, type: 3}
+  debug: {fileID: 0}
 --- !u!1 &6146201045910549157
 GameObject:
   m_ObjectHideFlags: 0

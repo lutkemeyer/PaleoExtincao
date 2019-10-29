@@ -10,8 +10,6 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
 
     private CarrosselObjetos carrosselObjetos;
 
-    private int index = 0;
-
     void Start() {
         gameObject.GetComponent<VirtualButtonBehaviour>().RegisterEventHandler(this);
         carrosselObjetos = new CarrosselObjetos(objetos);
@@ -39,6 +37,7 @@ public class ControladorBotaoRA : MonoBehaviour, IVirtualButtonEventHandler{
             }
         }
     }
+
     public void OnButtonPressed(VirtualButtonBehaviour vb) {
         carrosselObjetos.passarParaDireita();
         animacaoPressionar();
