@@ -9,13 +9,20 @@ using UnityEngine.SceneManagement;
  */
 public class ControladorCenas{
 
+    /*
+     * Constantes para troca de informações de seleção do menu
+     * principal para o jogo ou para o carregamento da tela
+     */
     public const string CENA_JOGO = "CenaJogo";
     public const string CENA_MENU = "CenaMenu";
     
     public const string PERSONAGEM = "PERSONAGEM";
     public const string PEAO = "PEAO";
     
-    
+    /*
+     * Variável que funciona como um banco de dados, pois 
+     * armazena as variáveis através de chaves
+     */
     private static Dictionary<string, string> parametros = new Dictionary<string, string>();
 
     /*

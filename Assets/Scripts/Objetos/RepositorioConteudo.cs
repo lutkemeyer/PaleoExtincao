@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Variável que armazena todas as informaçoes mostradas na carta 9
+ * usado para evitar o uso de um banco de dados ou armazenamento em arquivo
+ */
 public class RepositorioConteudo{
 
     private List<GeneroDinossauro> generosDinossauros = new List<GeneroDinossauro>();
 
+    /*
+     * Construtor que salva todos os gêneros de dinossauro
+     */
     public RepositorioConteudo(Sprite[] sprites) {
 
         addGeneroDinossauro(sprites[0], 
@@ -140,9 +147,18 @@ public class RepositorioConteudo{
             "em asas. Outras características que distinguem as aves são a presença de um bico sem dentes, um coração com quatro câmaras, um metabolismo " +
             "alto e ossos ocos (que favorecem o voo).");
     }
+
+    /*
+     * Método auxiliar para adicionar as informações
+     */
     public void addGeneroDinossauro(Sprite spr, string familia, string nome, string descricao) {
         generosDinossauros.Add(new GeneroDinossauro(spr,familia,nome,descricao));
     }
+
+    /*
+     * Método que é acessado externamente para adquirir
+     * o gênero de dinossauro
+     */
     public GeneroDinossauro get(int index) {
         return generosDinossauros[index];
     }

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Classe responsável por controlar a ação de clicar e arrastar
+ * no touch
+ */
 public class AcelerometroTouch{
     /*
      * Enumerador para controle dos movimentos realizados
@@ -82,6 +86,7 @@ public class AcelerometroTouch{
             primeiroToque = false;
         }
     }
+
     /*
      * Retorna a direção em que o movimento está sendo feito
      * através de um enumerador criado dentro desta classe,
@@ -109,6 +114,7 @@ public class AcelerometroTouch{
     public float getDistNorm() {
         return distancia / valorParaNormalizacao;
     }
+
     /*
      * Indica que um novo movimento de touch está sendo feito,
      * zerando as variáveis para uma nova captura
