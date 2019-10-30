@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using Vuforia;
 
+/*
+ * Componente responsável por fechar o painel de instrucoes sempre que reconhecer
+ * o objeto atrelado
+ */
 public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
 
     private TrackableBehaviour mTrackableBehaviour;
@@ -30,16 +34,14 @@ public class DetectorReconhecimento : MonoBehaviour, ITrackableEventHandler{
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus) {
-        // SE ENCONTROU O OBJETO
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
 
-            GameObject pnInstrucao = GameObject.FindGameObjectWithTag("PnInstrucao");
+            GameObject pnInstrucao = GameObject.FindGameObjectWithTag(TagsUI.CenaJogo.PnInstrucao);
             if (pnInstrucao != null) {
                 pnInstrucao.GetComponent<AnimadorAbrirFechar>().fechar();
             }
-
         }
     }
 }

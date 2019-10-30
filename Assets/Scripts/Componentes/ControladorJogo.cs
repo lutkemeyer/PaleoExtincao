@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Componente responsável por gerenciar as interações da interface principal da cena de jogo,
+ * além de resgatar as informações dadasa na cena de menu
+ */
 public class ControladorJogo : MonoBehaviour{
 
     /*
@@ -20,7 +24,7 @@ public class ControladorJogo : MonoBehaviour{
 
     /*
      * Assim que a classe é instanciada, as variáveis de seleção
-     * do dino e do peão é carregada, e atrelado, para que possa 
+     * do dino e do peão são carregadas, e atrelado, para que possa 
      * ser reconhecido pelo vuforia
      */
     void Start() {

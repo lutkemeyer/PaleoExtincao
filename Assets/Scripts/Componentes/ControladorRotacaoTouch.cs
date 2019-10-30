@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Componente responsável por controlar a ação de clicar e arrastar no touch
+ * do usuário, fazendo o objeto atrelado girar
+ */
 public class ControladorRotacaoTouch : MonoBehaviour
 {
     /* 

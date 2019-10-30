@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * 
+ */
 public class MovimentoMeteoro : MonoBehaviour{
 
     public float velocidade = 5;

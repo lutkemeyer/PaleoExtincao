@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Componente responsável por gerenciar todas as interações do menu principal
+ */
 public class ControladorMenu : MonoBehaviour{
 
     /*
      * vetor de dinossauros inseridos através
-     * do unity
+     * do unity que serão usados como personagens
      */
     public GameObject[] personagens;
 
@@ -37,10 +40,16 @@ public class ControladorMenu : MonoBehaviour{
     private CarrosselObjetos carrosselDinossauros;
     private CarrosselObjetos carrosselPeoes;
 
+    /*
+     * Método chamado quando a cena é carregada, instanciando os dois carroseis,
+     * podendo assim, fazer o gerenciamento dos personagens e dos peões de forma dinâmica
+     * e independente
+     */
     public void Start() {
         carrosselDinossauros = new CarrosselObjetos(personagens);
         carrosselPeoes = new CarrosselObjetos(peoes);
     }
+
     /*
      * método que troca o objeto para o próximo
      * item do vetor, seja ele um dino ou um peão
@@ -52,6 +61,7 @@ public class ControladorMenu : MonoBehaviour{
             carrosselPeoes.passarParaDireita();
         }
     }
+
     /*
      * método que troca o objeto para item anterior
      * do vetor, seja ele um dino ou um peão
@@ -70,8 +80,6 @@ public class ControladorMenu : MonoBehaviour{
      * e as mesmas serem possíveis de ser acessadas
      */
     public void OnClickSelecionar() {
-        //txtTitulo.GetComponent<Text>().text = "aaaaaa";
-        ///*
         if (isSelecionandoDino) {
             btnVoltar.gameObject.SetActive(true);
             isSelecionandoDino = false;
@@ -83,7 +91,6 @@ public class ControladorMenu : MonoBehaviour{
             ControladorCenas.addParametro(ControladorCenas.PEAO, carrosselPeoes.getIndice());
             ControladorCenas.carregaCena(ControladorCenas.CENA_JOGO);
         }
-        //*/
     }
     
     /*

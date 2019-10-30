@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Componente responsável por controlar o som dos botoes
+ */
 public class ControladorSomBotao : MonoBehaviour{
 
     /*
@@ -16,6 +19,10 @@ public class ControladorSomBotao : MonoBehaviour{
      */
     private Button botao { get { return GetComponent<Button>(); } }
 
+    /*
+     * Adiciona um listener ao botao que sempre que clicar, o som
+     * armazenado na variável é tocado
+     */
     void Start() {
         if (som != null) {
             gameObject.AddComponent<AudioSource>();
