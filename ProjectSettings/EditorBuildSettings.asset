@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CenaTeste.unity
+    guid: 9a95d41609ea9fc46b0e309d43e2853d
+  - enabled: 1
     path: Assets/Scenes/CenaMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1

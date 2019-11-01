@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38531a6b8c600a14a840456e9aca6a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
+  velocidade: 3
 --- !u!1001 &5368599534355371240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,17 +92,17 @@ PrefabInstance:
     - target: {fileID: 7576123698350260814, guid: d1144f3ebb789444e873f0dd004bcf5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.049999915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576123698350260814, guid: d1144f3ebb789444e873f0dd004bcf5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.42000002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576123698350260814, guid: d1144f3ebb789444e873f0dd004bcf5d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1160001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576123698350260814, guid: d1144f3ebb789444e873f0dd004bcf5d,
         type: 3}
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 376444feadd3dc84d819f791aeb297e6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.435
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 376444feadd3dc84d819f791aeb297e6,
         type: 3}

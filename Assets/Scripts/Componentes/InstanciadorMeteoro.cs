@@ -12,12 +12,13 @@ public class InstanciadorMeteoro : MonoBehaviour{
      * Variável usado unicamente para saber de que tipo de objeto 
      * será instanciado
      */
-    public GameObject meteoro;
+    public GameObject prefabMeteoro;
 
     /*
-     * Variável que armazena a posição final que o meteoro atingirá
+     * Variavel que armazena o sistema de particulas ativado quando
+     * o meteoro colide com a Terra
      */
-    public Transform pontoFinal;
+    public ParticleSystem prefabParticulaColisao;
 
     /*
      * Variável que armazena a distância da terra que será instanciado
@@ -36,23 +37,7 @@ public class InstanciadorMeteoro : MonoBehaviour{
      */
     private bool podeInstanciar = false;
     
-    /*
-     * Metodo responsável por instanciar um meteoro na sua posição
-     * adequada
-     */
-    private void Spawn(){
-        Vector3 posicaoInicial = new Vector3(0, ((float)distanciaMeteoro)/10, 0);
-        meteoroAtual = Instantiate(meteoro, posicaoInicial, Quaternion.identity) as GameObject;
-        meteoroAtual.transform.SetParent(pontoFinal, false);
-    }
-
-    /*
-     * Método chamado externamente, informando que o meteoro colidiu 
-     * com a Terra
-     */
-    public void colidiu() {
-        GameObject.Find("ParticulaEstilhacos").GetComponent<ParticleSystem>().Play();
-    }
+    
 
     /*
      * Método que verifica se pode instanciar, e quando pode, chama o método que
@@ -60,12 +45,49 @@ public class InstanciadorMeteoro : MonoBehaviour{
      */
     void Update(){
         if (podeInstanciar) {
-            if (meteoroAtual == null) {
-                Spawn();
+            if (meteoroAtual != null) {
+                if (meteoroAtual.transform.localPosition.y <= 0) {
+                    destruirMeteoro();
+                    instanciarImpacto();
+                    spawnMeteoro();
+                }
+            } else {
+                spawnMeteoro();
+            }
+        } else {
+            if (meteoroAtual != null) {
+                destruirMeteoro();
             }
         }
     }
 
+    /*
+     * Metodo responsável por instanciar um meteoro na sua posição
+     * adequada
+     */
+    private void spawnMeteoro() {
+        Vector3 posicaoInicial = new Vector3(0, 0.31f, 0);
+        meteoroAtual = Instantiate(prefabMeteoro, posicaoInicial, Quaternion.identity) as GameObject;
+        meteoroAtual.transform.SetParent(transform, false);
+    }
+
+    /*
+     * Método que destroi o meteoro atual se este existir
+     */
+    private void destruirMeteoro() {
+        if (meteoroAtual != null) {
+            Destroy(meteoroAtual);
+            meteoroAtual = null;
+        }
+    }
+
+    /*
+     * Método que ativa os estilhacos da colisao
+     */
+    private void instanciarImpacto() {
+        prefabParticulaColisao.GetComponent<ParticleSystem>().Play();
+    }
+    
     /*
      * Métodos chamados externamente, informando quando pode ou não instanciar
      * os meteoros
@@ -76,7 +98,5 @@ public class InstanciadorMeteoro : MonoBehaviour{
 
     public void stopInstance() {
         podeInstanciar = false;
-        Destroy(meteoroAtual);
-        meteoroAtual = null;
     }
 }
