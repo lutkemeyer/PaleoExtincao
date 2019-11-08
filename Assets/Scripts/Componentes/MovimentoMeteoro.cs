@@ -15,6 +15,8 @@ public class MovimentoMeteoro : MonoBehaviour{
      */
     public float velocidade = 3;
 
+    public ParticleSystem fogo;
+    
     /*
      * Variável que guarda o componente RigidBody do próprio meteoro,
      * que basicamente e interpretado como se fosse a "Massa" do meteoro
@@ -26,6 +28,7 @@ public class MovimentoMeteoro : MonoBehaviour{
      */
     void Start() {
         rb = GetComponent<Rigidbody>();
+        fogo.GetComponent<ParticleSystem>().Play();
     }
 
     /*
@@ -34,7 +37,10 @@ public class MovimentoMeteoro : MonoBehaviour{
      */
     void FixedUpdate() {
         if (velocidade != 0 && rb != null) {
-            rb.position += (transform.up * -1) * (velocidade/100 * Time.fixedDeltaTime);
+            Vector3 posicao = rb.transform.localPosition;
+            posicao.y -= velocidade / 100 * Time.fixedDeltaTime;
+            rb.transform.localPosition = posicao;
+            Debug.Log(rb.transform.localPosition);
         }
     }
 

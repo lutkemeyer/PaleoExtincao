@@ -12,22 +12,29 @@ public class DetectorTrackCarta3 : ControladorDeteccaoAR{
     /*
      * Objeto que gerencia a queda do meteoro
      */
-    public GameObject PrefMeteoroNaTerra;
+    public GameObject prefColisaoMeteoro;
 
     /*
      * Quando a carta for detectada, permite o inicio da queda de meteoros
      */
     public override void onApareceu() {
-        PrefMeteoroNaTerra.GetComponent<InstanciadorMeteoro>().startInstance();
+        InstanciadorMeteoro instanciador = prefColisaoMeteoro.GetComponentInChildren<InstanciadorMeteoro>();
+        if (instanciador != null) {
+            instanciador.startInstance();
+        }
     }
 
     /*
      * Quando a carta sumir da detecção, envia um sinal interrompendo a queda de meteoros
      */
     public override void onDesapareceu() {
-        PrefMeteoroNaTerra.GetComponent<InstanciadorMeteoro>().stopInstance();
+        InstanciadorMeteoro instanciador = prefColisaoMeteoro.GetComponentInChildren<InstanciadorMeteoro>();
+        if(instanciador != null) {
+            instanciador.stopInstance();
+        }
     }
 
     public override void onNaoApareceu() {
+        Debug.Log("carta não apareceu");
     }
 }
